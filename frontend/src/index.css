@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    @apply bg-yellow-500 text-white
+}
+
+.radioLabel {
+
+    @apply rounded-full text-blue-500 border border-blue-500 bg-slate-50 hover:bg-slate-200 active:bg-slate-300 px-2 py-1 mx-1 select-none relative;
+
+    input {
+        @apply absolute opacity-0 cursor-pointer;
+    }
+
+    &:has(input:checked){
+        @apply bg-blue-500 text-slate-50;
+    }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.save-button span {
+    font-size: 3rem;
+}
